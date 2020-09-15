@@ -1,21 +1,23 @@
 # Anotações postgres
 
-## verificar se o banco está ativo
+## Comandos iniciais
+
+**verificar se o banco está ativo**
 ```bash
 postgres=# SELECT NOW();
 ```
 
-## criar um novo database
+**criar um novo database**
 ```bash
 postgres=# CREATE DATABASE database_name;
 ```
 
-## listar os databases criados
+**listar os databases criados**
 ```bash
 postgres=# \l
 ```
 
-## apagar database
+**apagar database**
 ```bash
 postgres=# DROP DATABASE database_name;
 ```
