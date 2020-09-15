@@ -27,7 +27,7 @@ DROP DATABASE database_name;
 **criar uma tabela**
 
 ```sql=
-CREATE TABLE table_name (
+CREATE TABLE aluno (
    id SERIAL, 
    nome VARCHAR(255),
    cpf CHAR(11),
@@ -38,7 +38,7 @@ CREATE TABLE table_name (
    ativo BOOLEAN,
    data_nascimento DATE,
    hora_aula TIME,
-   matriculado_em timestamp,
+   matriculado_em timestamp
 );
 ```
 exemplo de uso:
