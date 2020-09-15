@@ -25,6 +25,7 @@ DROP DATABASE database_name;
 ```
 
 **criar uma tabela**
+O exemplo abaixo cria uma tabela aluno com vários atributos:
 
 ```sql=
 CREATE TABLE aluno (
@@ -53,3 +54,8 @@ exemplo de uso:
 * DATE - define a data de nascimento ou algo do tipo;
 * TIME - simula um horário de acesso para um usuário;
 * timestamp - hora consiste na concatenação de uma data e hora, seguida por um fuso horário opcional.
+
+**faz um select trazendo os dados da tabela criada aluno**
+```sql=
+SELECT * FROM aluno;
+```
