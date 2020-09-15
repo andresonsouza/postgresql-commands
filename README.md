@@ -1,22 +1,25 @@
 # Comandos postgreSQL
 
 **verificar se o banco está ativo**
-```bash
-postgres=# SELECT NOW();
+
+```sql=
+SELECT NOW();
 ```
 
 **criar um novo database**
-```bash
-postgres=# CREATE DATABASE database_name;
+
+```sql=
+CREATE DATABASE database_name;
 ```
 
 **listar os databases criados**
-```bash
-postgres=# \l
+
+```sql=
+ \l
 ```
 
 **apagar database**
-```bash
-postgres=# DROP DATABASE database_name;
-```
 
+```sql=
+DROP DATABASE database_name;
+```
