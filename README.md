@@ -1,6 +1,4 @@
-# Anotações postgres
-
-## Comandos iniciais
+# Comandos postgreSQL
 
 **verificar se o banco está ativo**
 ```bash
