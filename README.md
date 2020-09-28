@@ -1,4 +1,12 @@
-# Comandos postgreSQL
+# Resumo de comandos postgreSQL
+
+## Sobre o PostgreSQL
+
+PostgreSQL é um poderoso sistema de banco de dados relacional de objeto de código aberto que usa e estende a linguagem SQL combinada com muitos recursos que armazenam e escalam com segurança as cargas de trabalho de dados mais complicadas.
+
+O PostgreSQL ganhou uma forte reputação por sua arquitetura comprovada, confiabilidade, integridade de dados, conjunto de recursos robustos, extensibilidade e dedicação da comunidade de código aberto por trás do software para fornecer soluções inovadoras e de alto desempenho de maneira consistente.
+
+Para maiores informações consultar a [documentação oficial](https://www.postgresql.org/docs/).
 
 **verificar se o banco está ativo**
 
