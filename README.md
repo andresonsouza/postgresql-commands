@@ -74,8 +74,10 @@ SELECT * FROM aluno;
 
 **inserir dados na tabela criada**
 
+Veja o uso do comando insert na [documentação oficial](https://www.postgresql.org/docs/12/sql-insert.html).
+
 O comando INSERT - cria novas linhas em uma tabela
-Abaixo segue um exemplo de inserção onde são passados os campos e seus respectivos valores a serem inseridos
+Abaixo segue um exemplo de inserção onde são passados os campos e seus respectivos valores a serem inseridos.
 
 ```sql=
 INSERT INTO aluno (
@@ -102,4 +104,27 @@ INSERT INTO aluno (
 	'18:30:00',
 	'2020-09-28 10:59:28'
 )
+```
+
+**Atualizar valores na tabela criada**
+
+Veja o uso do comando UPDATE na [documentação oficial](https://www.postgresql.org/docs/12/sql-update.html).
+
+O WHERE serve para fazer um filtro de quais registros nos desejamos alterar.
+Abaixo segue exemplo de update dos dados de um usuário.
+
+
+```sql=
+UPDATE aluno
+	SET nome = 'Nagui',
+	cpf = 10987654321,
+	observacao = 'Teste',
+	idade = 26,
+	dinheiro = 15.23,
+	altura = 1.90,
+	ativo = FALSE,
+	data_nascimento = '1994-03-08',
+	hora_aula = '13:00:00',
+	matriculado_em = '2020-01-02 17:30:45'
+WHERE id = 1;
 ```
