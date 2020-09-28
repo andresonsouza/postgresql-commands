@@ -10,25 +10,25 @@ Para maiores informações consultar a [documentação oficial](https://www.post
 
 **verificar se o banco está ativo**
 
-```sql=
+```sql
 SELECT NOW();
 ```
 
 **criar um novo database**
 
-```sql=
+```sql
 CREATE DATABASE database_name;
 ```
 
 **listar os databases criados**
 
-```sql=
+```sql
  \l
 ```
 
 **apagar database**
 
-```sql=
+```sql
 DROP DATABASE database_name;
 ```
 
@@ -36,7 +36,7 @@ DROP DATABASE database_name;
 
 O exemplo abaixo cria uma tabela aluno com vários atributos:
 
-```sql=
+```sql
 CREATE TABLE aluno (
    id SERIAL,
    nome VARCHAR(255),
@@ -68,7 +68,7 @@ exemplo de uso:
 
 **faz um select trazendo os dados da tabela criada aluno**
 
-```sql=
+```sql
 SELECT * FROM aluno;
 ```
 
@@ -79,7 +79,7 @@ Veja o uso do comando INSERT na [documentação oficial](https://www.postgresql.
 O comando INSERT - cria novas linhas em uma tabela
 Abaixo segue um exemplo de inserção onde são passados os campos e seus respectivos valores a serem inseridos.
 
-```sql=
+```sql
 INSERT INTO aluno (
 	nome,
 	cpf,
@@ -114,7 +114,7 @@ O WHERE serve para fazer um filtro de quais registros nos desejamos alterar.
 Abaixo segue exemplo de update dos dados de um usuário.
 
 
-```sql=
+```sql
 UPDATE aluno
 	SET nome = 'Nagui',
 	cpf = 10987654321,
@@ -135,7 +135,7 @@ Veja o uso do comando DELETE na [documentação oficial](https://www.postgresql.
 
 Uma dica é sempre fazer um filtro antes para saber se o select está correto. Como no exemplo abaixo. Faremos o select na tabela aluno filtrando por Nagui para ver se os dados existem e vamos alterar os dados corretos.
 
-```sql=
+```sql
 SELECT *
 	FROM aluno
    WHERE nome = 'Nagui';
@@ -143,7 +143,7 @@ SELECT *
 
 Após confirmarmos que estamos no registro correto vamos deletar agora. Segue um exemplo de como fazer o DELETE abaixo.
 
-```sql=
+```sql
 DELETE
 	FROM aluno
    WHERE nome = 'Nagui';
