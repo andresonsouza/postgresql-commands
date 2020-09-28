@@ -74,7 +74,7 @@ SELECT * FROM aluno;
 
 **inserir dados na tabela criada**
 
-Veja o uso do comando insert na [documentação oficial](https://www.postgresql.org/docs/12/sql-insert.html).
+Veja o uso do comando INSERT na [documentação oficial](https://www.postgresql.org/docs/12/sql-insert.html).
 
 O comando INSERT - cria novas linhas em uma tabela
 Abaixo segue um exemplo de inserção onde são passados os campos e seus respectivos valores a serem inseridos.
@@ -127,4 +127,24 @@ UPDATE aluno
 	hora_aula = '13:00:00',
 	matriculado_em = '2020-01-02 17:30:45'
 WHERE id = 1;
+```
+
+**Deletar valores na tabela criada**
+
+Veja o uso do comando DELETE na [documentação oficial](https://www.postgresql.org/docs/12/sql-delete.html).
+
+Uma dica é sempre fazer um filtro antes para saber se o select está correto. Como no exemplo abaixo. Faremos o select na tabela aluno filtrando por Nagui para ver se os dados existem e vamos alterar os dados corretos.
+
+```sql=
+SELECT *
+	FROM aluno
+   WHERE nome = 'Nagui';
+```
+
+Após confirmarmos que estamos no registro correto vamos deletar agora. Segue um exemplo de como fazer o DELETE abaixo.
+
+```sql=
+DELETE
+	FROM aluno
+   WHERE nome = 'Nagui';
 ```
