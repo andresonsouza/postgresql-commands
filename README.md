@@ -8,31 +8,31 @@ O PostgreSQL ganhou uma forte reputação por sua arquitetura comprovada, confia
 
 Para maiores informações consultar a [documentação oficial](https://www.postgresql.org/docs/).
 
-**verificar se o banco está ativo**
+### Verificar se o banco está ativo
 
 ```sql
 SELECT NOW();
 ```
 
-**criar um novo database**
+## Criar um novo database
 
 ```sql
 CREATE DATABASE database_name;
 ```
 
-**listar os databases criados**
+## Listar os databases criados
 
 ```sql
  \l
 ```
 
-**apagar database**
+## Apagar database
 
 ```sql
 DROP DATABASE database_name;
 ```
 
-**criar uma tabela**
+## Criar uma tabela
 
 O exemplo abaixo cria uma tabela aluno com vários atributos:
 
@@ -66,13 +66,13 @@ exemplo de uso:
 - TIME - simula um horário de acesso para um usuário;
 - timestamp - hora consiste na concatenação de uma data e hora, seguida por um fuso horário opcional.
 
-**faz um select trazendo os dados da tabela criada aluno**
+## Faz um select trazendo os dados da tabela criada
 
 ```sql
 SELECT * FROM aluno;
 ```
 
-**inserir dados na tabela criada**
+## Inserir dados na tabela criada
 
 Veja o uso do comando INSERT na [documentação oficial](https://www.postgresql.org/docs/12/sql-insert.html).
 
@@ -106,7 +106,7 @@ INSERT INTO aluno (
 )
 ```
 
-**Atualizar valores na tabela criada**
+## Atualizar valores na tabela criada
 
 Veja o uso do comando UPDATE na [documentação oficial](https://www.postgresql.org/docs/12/sql-update.html).
 
@@ -129,7 +129,7 @@ UPDATE aluno
 WHERE id = 1;
 ```
 
-**Deletar valores na tabela criada**
+## Deletar valores na tabela criada
 
 Veja o uso do comando DELETE na [documentação oficial](https://www.postgresql.org/docs/12/sql-delete.html).
 
