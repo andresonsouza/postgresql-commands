@@ -59,3 +59,34 @@ exemplo de uso:
 ```sql=
 SELECT * FROM aluno;
 ```
+**inserir dados na tabela criada**
+
+O comando INSERT - cria novas linhas em uma tabela
+Abaixo segue um exemplo de inserção onde são passados os campos e seus respectivos valores a serem inseridos
+
+```sql=
+INSERT INTO aluno (
+	nome,
+	cpf,
+	observacao,
+	idade,
+	dinheiro,
+	altura,
+	ativo,
+	data_nascimento,
+	hora_aula,
+	matriculado_em
+
+) VALUES (
+	'Calopsita',
+	'11111111101',
+	'Aenean ac metus et augue blandit vehicula. Phasellus erat nulla, maximus ac turpis sit amet, lobortis viverra est. Etiam efficitur mollis lectus non ullamcorper. Praesent nec lacinia tortor. Ut a elementum arcu. Integer ac enim tellus. In vel purus tortor. Duis non imperdiet lectus. Nam eros erat, cursus a dapibus pretium, consectetur a turpis. Curabitur vel efficitur felis, at condimentum nunc.',
+	35,
+	100.50,
+	1.81,
+	TRUE,
+	'1985-12-04',
+	'18:30:00',
+	'2020-09-28 10:59:28'
+)
+```
