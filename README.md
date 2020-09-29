@@ -181,3 +181,37 @@ DELETE
 	FROM aluno
    WHERE nome = 'Nagui';
 ```
+
+### Filtrar registros de campos do tipo texto
+
+Vamos ver mais algumas formas de filtrar. E para isso primeiramente vamos inserir vários nomes com os outros campos vazios.
+
+```sql
+INSERT INTO aluno (nome) VALUES ('Andreson Souza');
+INSERT INTO aluno (nome) VALUES ('Adriele Souza');
+INSERT INTO aluno (nome) VALUES ('Loide Souza');
+INSERT INTO aluno (nome) VALUES ('Vagdon Souza');
+INSERT INTO aluno (nome) VALUES ('Acsa Souza');
+```
+
+Como já sabemos o filtro é baseado no comando ```WHERE```. Então primeiramente vamos pesquisar exatamente um texto usando o símbolo "=".
+
+```sql
+SELECT * 
+	FROM aluno
+    WHERE nome = 'Calopsita';
+```
+
+Para pesquisar todos os nomes diferentes de Calopsita usamos os sinais de "<>", ou podemos usar também os sinais de "!=" mas comumente vistos nas várias linguagens de programação. Os dois scripts abaixo trazem o mesmo retorno.
+
+```sql
+SELECT * 
+	FROM aluno
+    WHERE nome <> 'Calopsita';
+```
+
+```sql
+SELECT * 
+	FROM aluno
+    WHERE nome != 'Calopsita';
+```
