@@ -54,7 +54,7 @@ CREATE TABLE aluno (
 );
 ```
 
-exemplo de uso:
+Tipos mais usados:
 
 - SERIAL - se incrementa automaticamente;
 - VARCHAR(255) - possue um range de 0 até 255 caracteres;
