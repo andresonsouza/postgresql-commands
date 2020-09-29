@@ -8,6 +8,8 @@ O PostgreSQL ganhou uma forte reputação por sua arquitetura comprovada, confia
 
 Para maiores informações consultar a [documentação oficial](https://www.postgresql.org/docs/).
 
+Os comandos executados abaixo foram executados através do console do [pgAdmin4](https://www.pgadmin.org/) por ter uma quantidade maior de recursos e ser mais intuitivo de trabalhar.
+
 ### Verificar se o banco está ativo
 
 ```sql
@@ -66,10 +68,32 @@ exemplo de uso:
 - TIME - simula um horário de acesso para um usuário;
 - timestamp - hora consiste na concatenação de uma data e hora, seguida por um fuso horário opcional.
 
-### Faz um select trazendo os dados da tabela criada
+### Listando e filtrando itens de uma tabela
+
+O "*" trás todos os dados da tabela aluno.
 
 ```sql
 SELECT * FROM aluno;
+```
+
+Para filtrar os dados por campo podemos fazer como no exemplo abaixo. O campo escolhido foi o "nome".
+
+```sql
+SELECT nome FROM aluno;
+```
+Para trazer mais dados basta ir adicionando o campo seguido de vírgula. Como no exemplo abaixo.
+
+```sql
+SELECT nome, altura	FROM aluno;
+```
+
+Podemos também alterar o título a ser exibido ao filtrar um item. Abaixo segue um exemplo onde é exibido o título "quando_se_matriculou" ao invés de "matriculado_em".
+
+```sql
+SELECT nome,
+	altura,
+	matriculado_em AS quando_se_matriculou
+	FROM aluno;
 ```
 
 ### Inserir dados na tabela criada
