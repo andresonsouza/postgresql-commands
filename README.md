@@ -250,3 +250,20 @@ SELECT *
 	FROM aluno
     WHERE nome LIKE '%a';
 ```
+
+Listando nomes que contenham espaço.
+
+```sql
+SELECT * 
+	FROM aluno
+    WHERE nome LIKE '% %';
+```
+
+Listando nomes que contenham um determinado caracter no primeiro nome e outro caracter no segundo nome.
+Vamos supor que temos uma tabela com os nomes Bob James, Dave Grohl, Joss Stone, Diana Krall, Andre Nieri. No exemplo abaixo seria listado o nome "Diana Krall", que contém a letra "i" na primeira palavra e "l" na segunda palavra.
+
+```sql
+SELECT * 
+	FROM aluno
+    WHERE nome LIKE '%i%l%';
+```
