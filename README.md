@@ -107,7 +107,7 @@ SELECT nome AS "Nome do Aluno",
 
 ### Inserir dados na tabela criada
 
-Veja o uso do comando INSERT na [documentação oficial](https://www.postgresql.org/docs/12/sql-insert.html).
+Veja o uso do comando ```INSERT``` na [documentação oficial](https://www.postgresql.org/docs/12/sql-insert.html).
 
 O comando INSERT - cria novas linhas em uma tabela
 Abaixo segue um exemplo de inserção onde são passados os campos e seus respectivos valores a serem inseridos.
@@ -164,7 +164,7 @@ WHERE id = 1;
 
 ### Deletar valores na tabela criada
 
-Veja o uso do comando DELETE na [documentação oficial](https://www.postgresql.org/docs/12/sql-delete.html).
+Veja o uso do comando ```DELETE``` na [documentação oficial](https://www.postgresql.org/docs/12/sql-delete.html).
 
 Uma dica é sempre fazer um filtro antes para saber se o select está correto. Como no exemplo abaixo. Faremos o select na tabela aluno filtrando por Calopsita para ver se os dados existem e vamos alterar os dados corretos.
 
@@ -232,4 +232,21 @@ O operador NOT LIKE funciona de forma oposta ao like. E trás o que é diferente
 SELECT * 
 	FROM aluno
     WHERE nome NOT LIKE 'Di_go';
+```
+
+Podemos usar o operador ```LIKE``` com o símbolo de "%" também.
+O exemplo abaixo lista todos os nomes que começarem com a letra "D" maiúscula. 
+
+```sql
+SELECT * 
+	FROM aluno
+    WHERE nome LIKE 'D%';
+```
+
+Já o seguinte exemplo lista todos os nomes que terminal com a letra "a" minúscula.
+
+```sql
+SELECT * 
+	FROM aluno
+    WHERE nome LIKE '%a';
 ```
