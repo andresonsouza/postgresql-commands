@@ -215,3 +215,21 @@ SELECT *
 	FROM aluno
     WHERE nome != 'Calopsita';
 ```
+
+O uso do operador LIKE.
+Suponde que tenhamos dois Registros parecidos em uma tabela. Um de nome Diego e outro de nome Diogo.
+Podemos usar o "_" para ignorar os caracteres diferentes do nome, e os nomes que tenham caracteres em comum serão listados.
+
+```sql
+SELECT * 
+	FROM aluno
+    WHERE nome LIKE 'Di_go';
+```
+
+O operador NOT LIKE funciona de forma oposta ao like. E trás o que é diferente a condição. Entenda melhor no exemplo abaixo, onde serão listados todos os nomes exceto Diego e Diogo.
+
+```sql
+SELECT * 
+	FROM aluno
+    WHERE nome NOT LIKE 'Di_go';
+```
