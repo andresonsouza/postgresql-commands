@@ -70,7 +70,7 @@ Tipos mais usados:
 
 ### Listando e filtrando itens de uma tabela
 
-O "*" trás todos os dados da tabela aluno.
+O "*" trás todos os campos da tabela aluno.
 
 ```sql
 SELECT * FROM aluno;
@@ -81,7 +81,7 @@ Para filtrar os dados por campo podemos fazer como no exemplo abaixo. O campo es
 ```sql
 SELECT nome FROM aluno;
 ```
-Para trazer mais dados basta ir adicionando o campo seguido de vírgula. Como no exemplo abaixo.
+Para trazer mais dados basta ir adicionando o campo seguido de vírgula. Como no exemplo abaixo, onde são exibidas as colunas de "nome" e "altura".
 
 ```sql
 SELECT nome, altura	FROM aluno;
