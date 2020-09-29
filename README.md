@@ -149,7 +149,7 @@ Abaixo segue exemplo de update dos dados de um usuário.
 
 ```sql
 UPDATE aluno
-	SET nome = 'Nagui',
+	SET nome = 'Calopsita',
 	cpf = 10987654321,
 	observacao = 'Teste',
 	idade = 26,
@@ -166,12 +166,12 @@ WHERE id = 1;
 
 Veja o uso do comando DELETE na [documentação oficial](https://www.postgresql.org/docs/12/sql-delete.html).
 
-Uma dica é sempre fazer um filtro antes para saber se o select está correto. Como no exemplo abaixo. Faremos o select na tabela aluno filtrando por Nagui para ver se os dados existem e vamos alterar os dados corretos.
+Uma dica é sempre fazer um filtro antes para saber se o select está correto. Como no exemplo abaixo. Faremos o select na tabela aluno filtrando por Calopsita para ver se os dados existem e vamos alterar os dados corretos.
 
 ```sql
 SELECT *
 	FROM aluno
-   WHERE nome = 'Nagui';
+   WHERE nome = 'Calopsita';
 ```
 
 Após confirmarmos que estamos no registro correto vamos deletar agora. Segue um exemplo de como fazer o DELETE abaixo.
@@ -179,7 +179,7 @@ Após confirmarmos que estamos no registro correto vamos deletar agora. Segue um
 ```sql
 DELETE
 	FROM aluno
-   WHERE nome = 'Nagui';
+   WHERE nome = 'Calopsita';
 ```
 
 ### Filtrar registros de campos do tipo texto
@@ -187,11 +187,11 @@ DELETE
 Vamos ver mais algumas formas de filtrar. E para isso primeiramente vamos inserir vários nomes com os outros campos vazios.
 
 ```sql
-INSERT INTO aluno (nome) VALUES ('Andreson Souza');
-INSERT INTO aluno (nome) VALUES ('Adriele Souza');
-INSERT INTO aluno (nome) VALUES ('Loide Souza');
-INSERT INTO aluno (nome) VALUES ('Vagdon Souza');
-INSERT INTO aluno (nome) VALUES ('Acsa Souza');
+INSERT INTO aluno (nome) VALUES ('Bob James');
+INSERT INTO aluno (nome) VALUES ('Dave Grohl');
+INSERT INTO aluno (nome) VALUES ('Joss Stone');
+INSERT INTO aluno (nome) VALUES ('Diana Krall');
+INSERT INTO aluno (nome) VALUES ('Andre Nieri');
 ```
 
 Como já sabemos o filtro é baseado no comando ```WHERE```. Então primeiramente vamos pesquisar exatamente um texto usando o símbolo "=".
