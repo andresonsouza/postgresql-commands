@@ -96,6 +96,15 @@ SELECT nome,
 	FROM aluno;
 ```
 
+Para texto com espaços basta colocar os mesmos entre aspas. Segue exemple abaixo, onde o campo "nome" passou a ser substituido por "Nome do Aluno" na exibição do título do campo.
+
+```sql
+SELECT nome AS "Nome do Aluno",
+	altura,
+	matriculado_em AS quando_se_matriculou
+	FROM aluno;
+```
+
 ### Inserir dados na tabela criada
 
 Veja o uso do comando INSERT na [documentação oficial](https://www.postgresql.org/docs/12/sql-insert.html).
