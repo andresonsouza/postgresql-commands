@@ -1,6 +1,6 @@
 # Ambiente de estudos PostgreSQL com docker
 
-## Sobre o Ambiente
+## Sobre o repositório
 
 Esse repositório foi criado com o intuito de estudar o banco de dados relacional PostgreSQL. A primeira parte mostra como executar o projeto usando docker e a segunda parte um resumo de scripts e dicas sobre o PostgreSQL. Montei aqui um ambiente com dois serviços, O serviço db que roda uma instância do banco de dados  e outra instância onde roda o serviço pgadmin para manipular o banco.
 
@@ -9,11 +9,15 @@ Esse repositório foi criado com o intuito de estudar o banco de dados relaciona
 Um pré-requisito para executar o ambiente é ter o docker e docker-compose instalados.
 As instruções de instalação do docker estão na documentação que pode ser acessada no seguinte [link](https://docs.docker.com/engine/install/).
 
+### Execute o arquivo compose
+
 Atendendo aos pré-requisitos e tendo clonado o repositório vamos primeiramente executar o seguinte comando na raiz do projeto.
 
 ``` bash
 docker-compose up -d
 ```
+
+### Faça o login
 
 Após os dois serviços subirem vamos abrir o browser e digitar a seguinte url:
 
@@ -23,12 +27,37 @@ A porta "8888" é a porta que foi definida no arquivo docker-compose.yml para o 
 
 Após alguns segundos será exibida a seguinte tela:
 
-![](https://i.imgur.com/lNhsyrg.png)
+![](./assets/login.png)
 
 Para logar basta usar o email e password definidos no environment do serviço, que são mostrados abaixo:
 
 Email: admin@pgadmin.com.br
+
 Senha: pgadmin2020
+
+Após o login será exibido o painel principal, como mostra a imagem abaixo.
+
+![](./assets/pos-login.png)
+
+### Configure uma conexão entre o postgresql e o pgadmin
+
+Para criar a conexão vamos clicar na opção Add New Server  e vamos inserir os dados definidos no arquivo docker-compose.yml. São eles:
+
+* **Name** - Primeiramente vamos definir um nome qualquer para a conexão na aba "General". Eu usei o nome "docker".
+
+* **Host name/address** - Agora na aba Connection vamos usar a url do serviço que no nosso caso é o nome do container definido, "db".
+
+* **Port** - A porta é a padrão do postgresql, a porta "5432".
+
+* **Username** - O username é o padrão "postgres".
+
+* **Password** - O password é o que definimos no arquivo, "postgres".
+
+![](./assets/conexao.png)
+
+Após salvar as configuração deverá ser exibido um dashboard como mostra a imagem abaixo e o ambiente de estudos já está pronto.
+
+![](./assets/dashboard.png)
 
 ## Sobre o PostgreSQL
 
@@ -246,7 +275,7 @@ SELECT *
     WHERE nome != 'Calopsita';
 ```
 
-O uso do operador `LIKE`.
+O uso do operador `LIKE` .
 Suponde que tenhamos dois Registros parecidos em uma tabela. Um de nome Diego e outro de nome Diogo.
 Podemos usar o "_" para ignorar os caracteres diferentes do nome, e os nomes que tenham caracteres em comum serão listados.
 
