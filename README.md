@@ -15,6 +15,21 @@ Atendendo aos pré-requisitos e tendo clonado o repositório vamos primeiramente
 docker-compose up -d
 ```
 
+Após os dois serviços subirem vamos abrir o browser e digitar a seguinte url:
+
+[http://localhost:8888](http://localhost:8888)
+
+A porta "8888" é a porta que foi definida no arquivo docker-compose.yml para o serviço pgadmin rodar.
+
+Após alguns segundos será exibida a seguinte tela:
+
+![](https://i.imgur.com/lNhsyrg.png)
+
+Para logar basta usar o email e password definidos no environment do serviço, que são mostrados abaixo:
+
+Email: admin@pgadmin.com.br
+Senha: pgadmin2020
+
 ## Sobre o PostgreSQL
 
 PostgreSQL é um poderoso sistema de banco de dados relacional de objeto de código aberto que usa e estende a linguagem SQL combinada com muitos recursos que armazenam e escalam com segurança as cargas de trabalho de dados mais complicadas.
